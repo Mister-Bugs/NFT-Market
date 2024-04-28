@@ -306,7 +306,7 @@ contract MyNFT is ERC721, ERC721Enumerable, ERC721URIStorage, Ownable{
 3. 将前端组件放在`components`下统一管理，然后写前端逻辑就可以了；
 4. 依赖包：
    1. `react`，前端框架；
-   2. `ether,js`：智能合约交互；
+   2. `ether.js`：智能合约交互；
    3. `react-router-dom`，路由上传完成后跳转到上传完成的页面`URL`；
    4. `axios`:`HTTP`客户端，相当于`ajax`;
 
