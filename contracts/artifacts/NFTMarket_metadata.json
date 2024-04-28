@@ -114,7 +114,13 @@
 					{
 						"indexed": false,
 						"internalType": "uint256",
-						"name": "price",
+						"name": "oldPrice",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "newPrice",
 						"type": "uint256"
 					}
 				],
@@ -175,7 +181,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "getAllOrders",
+				"name": "getAllNFTs",
 				"outputs": [
 					{
 						"components": [
@@ -204,14 +210,8 @@
 				"type": "function"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "seller",
-						"type": "address"
-					}
-				],
-				"name": "getMyOrders",
+				"inputs": [],
+				"name": "getMyNFTs",
 				"outputs": [
 					{
 						"components": [
@@ -270,6 +270,38 @@
 						"internalType": "struct NFTMarket.Order",
 						"name": "",
 						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getOrderLength",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_tokenId",
+						"type": "uint256"
+					}
+				],
+				"name": "isListed",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
 					}
 				],
 				"stateMutability": "view",
@@ -414,7 +446,7 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "tokenId",
+						"name": "_tokenId",
 						"type": "uint256"
 					},
 					{
@@ -517,11 +549,11 @@
 			]
 		},
 		"contracts/nft-market.sol": {
-			"keccak256": "0xaf56604d0b672bca0f156944ca13fe70bfe05b8ce74aa3cd12940c3470c646a3",
+			"keccak256": "0x6316ebfee8bee24e45694277add09648977705815f0037334593911a5f05755b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a4cd79d77a045721327ae8bef2b07a74f85bf93e47b7dd25fd6e576ffdd8c092",
-				"dweb:/ipfs/QmaxhXpuZe5FSrx1MTfQAQGVQpbx1RvNsvuMUGzxuy71CQ"
+				"bzz-raw://04a1abf0cd4f99af40268e12995ee3b0e082da118fa822d0ca80fa401e5af625",
+				"dweb:/ipfs/QmNUGTHVuSEPCgm95ANyvbsyGsNqxZHxVJvLyPH4oh4WNn"
 			]
 		}
 	},

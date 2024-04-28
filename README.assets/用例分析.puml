@@ -1,0 +1,31 @@
+@startuml
+
+left to right direction
+skinparam packageStyle rectangle
+actor Buyer as "用户"
+
+Buyer --> (查看NFT)
+(查看NFT) -->(查看NFT图片、价格、描述)
+(查看NFT) -->(查看出售方、NFT id)
+
+Buyer -->(购买NFT)
+(购买NFT) -->(钱包授权)
+(购买NFT) -->(钱包转账)
+
+Buyer --> (铸造NFT)
+(铸造NFT) --> (名称、描述、图片)
+
+
+Buyer --> (上架NFT)
+(上架NFT) --> (授权给合约)
+(上架NFT) --> (转移时附上价格)
+
+Buyer --> (管理自己已上架的NFT)
+(管理自己已上架的NFT) --> (查询NFT上架信息)
+(管理自己已上架的NFT) --> (修改价格)
+(管理自己已上架的NFT) --> (取消上架)
+Buyer --> (管理自己未上架的NFT)
+(管理自己未上架的NFT) --> (查询NFT信息)
+(管理自己未上架的NFT) --> (上架)
+
+@enduml
